@@ -76,6 +76,8 @@ theme = "FixIt"
     RSS = true
 
   [params.page]
+    wordCount = false
+    readingTime = false
     [params.page.toc]
       enable = true
       auto = false
