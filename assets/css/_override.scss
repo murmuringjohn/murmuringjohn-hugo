@@ -36,13 +36,13 @@ $blockquote-color-dark: #7FA3D1;
 // 스크린샷의 흐릿한 본문과 발행일 글자색을 명도가 확실한 색으로 고정합니다.
 body, p, .post-content, .post-entry {
     color: $global-font-color !important; // #34302A (짙은 차콜 브라운) 적용
-    font-weight: 350 !important;
+    font-weight: 300 !important;
 }
 
 // 3. 발행일 및 작성자 (post-publish / post-meta) 영역 선명화
 .post-meta, .post-meta *, .post-publish, .meta, .author {
     color: #555047 !important; // 배경과 대비가 맞는 차분한 중간 브라운으로 고정
-    font-weight: 350 !important;
+    font-weight: 300 !important;
 }
 
 // 4. '더 읽기' 등 링크 텍스트 강조
