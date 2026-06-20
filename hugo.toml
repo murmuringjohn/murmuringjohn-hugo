@@ -43,6 +43,9 @@ theme = "FixIt"
       [params.header.title.subtitle]
         name = "침례 요한처럼 광야에서 외치는 선지자는 아닙니다. 다만 그가 그랬던 것처럼, 말씀 앞에 서서 이 시대를 향한 하나님의 음성에 귀를 기울이고 싶습니다."
 
+  [params.author]  
+    name = "Murmuring John"
+
   [params.footer]
     enable = true
     copyright = true
