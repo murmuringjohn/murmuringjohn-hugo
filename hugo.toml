@@ -1,0 +1,102 @@
+baseURL = "https://murmuringjohn.page/"
+languageCode = "ko"
+defaultContentLanguage = "ko"
+hasCJKLanguage = true
+title = "광야에서 혼자 중얼거리는 소리"
+theme = "FixIt"
+
+# Jekyll의 permalink: /posts/:title/ 를 그대로 재현
+# 파일명이 YYYY-MM-DD-제목.md 형식이면 Hugo가 날짜를 자동 분리하고
+# 나머지 부분을 슬러그로 씁니다.
+[permalinks]
+  posts = "/posts/:slug/"
+
+[pagination]
+  pagerSize = 10
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+# ───────────── FixIt 테마 설정 ─────────────
+[params]
+  # 확인됨 (FixIt 공식 hugo.toml 기준)
+  defaultTheme = "auto"        # light / dark / auto
+  dateFormat = "2006-01-02"
+  fingerprint = ""
+  enablePWA = false
+  capitalizeTitles = true
+  withSiteTitle = true
+  titleDelimiter = "-"
+  indexWithSubtitle = false
+
+  # 검증 필요: 다운로드한 exampleSite/hugo.toml과 대조 권장
+  [params.header]
+    [params.header.title]
+      name = "광야에서 혼자 중얼거리는 소리"
+      # subtitle은 인덱스 페이지 부제로 노출됨
+      [params.header.title.subtitle]
+        name = "침례 요한처럼 광야에서 외치는 선지자는 아닙니다. 다만 그가 그랬던 것처럼, 말씀 앞에 서서 이 시대를 향한 하나님의 음성에 귀를 기울이고 싶습니다."
+
+  [params.footer]
+    enable = true
+    copyright = true
+
+  [params.section]
+    paginate = 10
+    dateFormat = "01-02"
+    rss = 10
+
+  [params.list]
+    paginate = 10
+    dateFormat = "01-02"
+    rss = 10
+
+  [params.home]
+    [params.home.profile]
+      enable = true
+      subtitle = "한국 교회의 건강과 영적 각성을 바라는 마음으로, 작고 낮은 목소리로 중얼거려 봅니다."
+      typeit = false
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    GitHub = "murmuringjohn"
+    Email = "murmuringjohn@gmail.com"
+    RSS = true
+
+  [params.page]
+    [params.page.toc]
+      enable = true
+      auto = false
+    [params.page.code]
+      copy = true
+    [params.page.comment]
+      enable = false   # 댓글 시스템 도입 전까지 false 유지
+
+  [params.search]
+    enable = true
+    type = "lunr"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "글"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "categories"
+    name = "카테고리"
+    url = "/categories/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
