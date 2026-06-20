@@ -1,4 +1,4 @@
-// ── 폰트: 프리텐다드 ──────────────────────────────
+// ── 폰트: 프리텐다드 Light ────────────────────────
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 $global-font-family: 'Pretendard Variable', $global-font-family;
 $global-font-weight: 300;
@@ -9,25 +9,23 @@ $global-background-color-dark: #1E1C18;
 $header-background-color: #F3EEE3;
 $header-background-color-dark: #221F1A;
 
-// ── 본문 글자색: 살짝 더 연하게 조정 ──────────────────
+// ── 본문 글자색 ────────────────────────────────────
 $global-font-color: #34302A;
 $global-font-color-dark: #D9D2C2;
-
-// 보조 텍스트(날짜 등) — 그대로 유지
-$global-font-secondary-color: #7A7164;
+$global-font-secondary-color: #4A4339;
 $global-font-secondary-color-dark: #A89F8D;
 
 $global-border-color: #E5DFD2;
 $global-border-color-dark: #3A352C;
 
-// ── 포인트 색(와인 적갈색) ─────────────────────────
-$global-link-color: #7A2E2E;
-$global-link-color-dark: #D98B7B;
-$global-link-hover-color: #9B3D34;
-$global-link-hover-color-dark: #E8A99A;
-$single-link-color: #7A2E2E;
-$single-link-color-dark: #D98B7B;
-$single-link-hover-color: #9B3D34;
-$single-link-hover-color-dark: #E8A99A;
-$blockquote-color: #7A2E2E;
-$blockquote-color-dark: #D98B7B;
+// ── 포인트 색: 와인 → 잉크블루 ─────────────────────
+$global-link-color: #34507A;
+$global-link-color-dark: #7FA3D1;
+$global-link-hover-color: #4A6B9C;
+$global-link-hover-color-dark: #9EBBDD;
+$single-link-color: #34507A;
+$single-link-color-dark: #7FA3D1;
+$single-link-hover-color: #4A6B9C;
+$single-link-hover-color-dark: #9EBBDD;
+$blockquote-color: #34507A;
+$blockquote-color-dark: #7FA3D1;
