@@ -1,10 +1,4 @@
-// 메인 페이지 글 요약 텍스트를 좀 더 진하게 (선택자 추측)
-.home .posts .summary .content {
-  color: #4A4339;
-}
-
-// 사이트 로고/타이틀을 포인트색이 아닌 잉크색으로 분리
-// (글 제목과 구분되도록)
+// 사이트 로고를 포인트색이 아닌 잉크색으로
 .logo,
 .logo a {
   color: $global-font-color !important;
@@ -12,9 +6,4 @@
 .logo:hover,
 .logo a:hover {
   color: $global-link-hover-color !important;
-}
-
-// 글 부제(subtitle) 폰트 크기를 살짝 축소 (선택자 추측)
-.single .subtitle {
-  font-size: 1rem;
 }
