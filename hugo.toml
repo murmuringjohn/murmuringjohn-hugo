@@ -47,9 +47,10 @@ theme = "FixIt"
     name = "Murmuring John"
 
   [params.footer]
-    enable = true
+    powered = { enable = false }
     copyright = true
-
+    author = true
+  
   [params.section]
     paginate = 10
     dateFormat = "01-02"
