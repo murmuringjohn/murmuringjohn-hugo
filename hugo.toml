@@ -84,8 +84,21 @@ theme = "FixIt"
     [params.page.code]
       copy = true
     [params.page.comment]
-      enable = false   # 댓글 시스템 도입 전까지 false 유지
-
+      enable = true     
+      
+    [params.page.comment.giscus]      
+      enable = true
+    repo = "murmuringjohn/murmuringjohn.github.io"   # 3단계에서 받은 data-repo
+    repoId = "R_kgDOTAF9FQ"                          # 3단계에서 받은 data-repo-id
+    category = "Announcements"                       # 3단계에서 받은 data-category
+    categoryId = "DIC_kwDOTAF9Fc4DEIhy"                    # 3단계에서 받은 data-category-id
+    mapping = "pathname"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lightTheme = "light"
+    darkTheme = "dark"
+    
   [params.search]
     enable = true
     type = "lunr"
