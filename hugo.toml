@@ -94,7 +94,7 @@ theme = "FixIt"
   [[menu.main]]
     identifier = "blog"
     name = "블로그"
-    url = "/caterogies/blog/"
+    url = "/categories/blog/"
     weight = 1
 
   [[menu.main]]
