@@ -88,7 +88,7 @@ theme = "FixIt"
       
     [params.page.comment.giscus]      
       enable = true
-    repo = "murmuringjohn-hugo/murmuringjohn.github.io"   # 3단계에서 받은 data-repo
+    repo = "murmuringjohn/murmuringjohn-hugo"   # 3단계에서 받은 data-repo
     repoId = "R_kgDOTAF9FQ"                          # 3단계에서 받은 data-repo-id
     category = "Announcements"                       # 3단계에서 받은 data-category
     categoryId = "DIC_kwDOTAF9Fc4DEIhy"                    # 3단계에서 받은 data-category-id
