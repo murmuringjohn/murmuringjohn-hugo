@@ -64,7 +64,7 @@ theme = "FixIt"
   [params.home]
     [params.home.profile]
       enable = true
-      subtitle = "한국 교회의 건강과 영적 각성을 바라는 마음으로, 작고 낮은 목소리로 중얼거려 봅니다."
+      subtitle = "듣는 이 별로 없어도 광야에서 혼자 중얼거려 봅니다. 반박시 여러분 말이 다 맞습니다."
       typeit = false
     [params.home.posts]
       enable = true
