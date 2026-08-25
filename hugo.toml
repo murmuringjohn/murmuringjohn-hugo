@@ -94,23 +94,17 @@ theme = "FixIt"
   [[menu.main]]
     identifier = "blog"
     name = "블로그"
-    url = "/tags/blog/"
+    url = "/caterogies/blog/"
     weight = 1
 
   [[menu.main]]
     identifier = "review"
     name = "서평"
-    url = "/tags/review/"
+    url = "/categories/review/"
     weight = 2
-
-  [[menu.main]]
-    identifier = "theology"
-    name = "신학자료"
-    url = "/tags/theology/"
-    weight = 3
 
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 4
+    weight = 3
