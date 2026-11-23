@@ -1,20 +1,39 @@
-// 본문 문단 사이 간격을 넓게
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+// 글자 렌더링 선명도 향상
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.015em;
+}
+
+// 본문 문단 간격, 줄간격 및 선명한 굵기 보정
 .content p,
 .post-content p,
 .single .content p,
 .single-content p,
 article .content p {
+  font-size: 1.05rem;
+  font-weight: 420; // 가변 폰트 특성을 활용해 일반 400보다 살짝 더 또렷하게 표시
   margin-bottom: 1.5em;
   line-height: 1.85;
+  color: #191C20;
 }
 
-// 본문 안 소제목(h2, h3) 위아래 여백을 넓게
+// 본문 안 소제목(h2, h3) 위아래 여백 및 대비 강화
 .content h2,
 .content h3,
 .single .content h2,
 .single .content h3,
 .single-content h2,
 .single-content h3 {
+  font-weight: 700;
+  color: #111315;
   margin-top: 2.2em;
   margin-bottom: 0.9em;
+}
+
+// 상단 헤더 경계선을 얇고 정갈하게 정리
+header {
+  border-bottom: 1px solid #EAECEF;
 }
