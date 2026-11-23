@@ -1,4 +1,34 @@
+/* 기존 Pretendard 아래에 리디바탕 웹폰트 한 줄 추가 */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 UI, 메뉴, 메타 정보는 깔끔한 Pretendard 유지 */
+html, body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  /* ... 기존 배경/색상 코드 유지 ... */
+}
+
+/* 포스트 본문 문단과 인용구만 책처럼 읽히는 리디바탕 적용 */
+.single .content,
+.single .content p,
+.single .content blockquote p {
+  font-family: "RIDIBatang", "Pretendard", serif !important;
+  font-size: 1.05rem;
+  line-height: 1.95; /* 명조체는 줄간격을 조금 더 넉넉히 주면 훨씬 편합니다 */
+  letter-spacing: -0.01em;
+}
+
+/* 제목과 소제목(h1, h2, h3)은 선명한 Pretendard Bold 유지 */
+.single .single-title,
+.single .content h2,
+.single .content h3 {
+  font-family: "Pretendard", sans-serif !important;
+}
 
 /* =========================================================
    1. 라이트모드 기본 설정 (크림 아이보리 & 웜 테라코타)
