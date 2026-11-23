@@ -276,3 +276,77 @@ body[data-theme='dark'] {
 [data-theme='dark'] #toc-auto .toc-content a.active {
   color: #E08A68 !important;
 }
+
+/* =========================================================
+   포스트 상단 헤더(제목·부제·메타 정보) 에디토리얼 레이아웃
+   ========================================================= */
+
+/* 1. 제목 영역 전체에 충분한 여백과 하단 구분선 부여 */
+.single .single-title {
+  margin-top: 0.4em !important;
+  margin-bottom: 0.35em !important;
+  line-height: 1.3;
+}
+
+.single .single-subtitle {
+  margin-bottom: 1.1em !important;
+  line-height: 1.5;
+}
+
+/* 2. 메타 정보 영역(저자·카테고리·날짜)을 깔끔한 한 줄 + 하단 경계선으로 정리 */
+.single .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4em 0.9em;
+  padding-bottom: 1.4em;
+  margin-bottom: 2.2em;
+  border-bottom: 1px solid #E5DFD5;
+  font-size: 0.9rem;
+  color: #787067 !important;
+}
+
+/* 투박한 기본 아이콘(사람, 폴더, 달력) 숨기기 */
+.single .post-meta i,
+.single .post-meta svg {
+  display: none !important;
+}
+
+/* 저자 이름('Murmuring John') 숨기기 - 다시 표시하고 싶으면 이 블록만 지우세요 */
+.single .post-meta .post-author {
+  display: none !important;
+}
+
+/* 카테고리 링크('Blog' 등)를 단정한 포인트 배지로 변경 */
+.single .post-meta .post-category a {
+  display: inline-block;
+  background-color: #F4EAE3;
+  color: #B85D3B !important;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.2em 0.65em;
+  border-radius: 4px;
+  text-decoration: none !important;
+}
+
+/* 날짜와 카테고리 줄바꿈(<br>) 제거해 한 줄에 나란히 배치 */
+.single .post-meta .post-meta-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+.single .post-meta br {
+  display: none !important;
+}
+
+/* 다크모드 대응 */
+[data-theme='dark'] .single .post-meta {
+  border-bottom-color: #322D27;
+  color: #9C9286 !important;
+}
+
+[data-theme='dark'] .single .post-meta .post-category a {
+  background-color: #2E2621;
+  color: #E08A68 !important;
+}
