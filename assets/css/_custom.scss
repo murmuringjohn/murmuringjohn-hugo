@@ -1,44 +1,27 @@
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+/* 1. Pretendard 표준 웹폰트 적용 (가변 폰트보다 브라우저 호환성과 굵기 표현이 안정적) */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
-// 글자 렌더링 선명도 향상
-body {
+html, body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif !important;
+  background-color: #FFFFFF !important;
+  color: #191C20 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.015em;
 }
 
-// 본문 문단 간격, 줄간격 및 선명한 굵기 보정
-.content p,
-.post-content p,
-.single .content p,
-.single-content p,
-article .content p {
-  font-size: 1.05rem;
-  font-weight: 420; // 가변 폰트 특성을 활용해 일반 400보다 살짝 더 또렷하게 표시
-  margin-bottom: 1.5em;
-  line-height: 1.85;
-  color: #191C20;
-}
-
-// 본문 안 소제목(h2, h3) 위아래 여백 및 대비 강화
-.content h2,
-.content h3,
-.single .content h2,
-.single .content h3,
-.single-content h2,
-.single-content h3 {
-  font-weight: 700;
-  color: #111315;
-  margin-top: 2.2em;
-  margin-bottom: 0.9em;
-}
-
-// 상단 헤더 경계선을 얇고 정갈하게 정리
+/* 상단 헤더 및 경계선 */
 header {
-  border-bottom: 1px solid #EAECEF;
+  background-color: #FFFFFF !important;
+  border-bottom: 1px solid #EAECEF !important;
 }
 
-// 메인 화면 글 목록의 요약문(.summary)이 흐릿한 회색으로 나오는 문제 해결
+/* 2. 메인 화면 글 목록 요약문 선명하게 */
+.single.summary .single-title a {
+  color: #111315 !important;
+  font-weight: 700;
+}
+
 .single.summary .content,
 .summary .content {
   color: #22252A !important;
@@ -46,14 +29,78 @@ header {
   opacity: 1 !important;
 }
 
-// 글 목록 제목을 더 또렷하게 강조
-.single.summary .single-title a {
-  color: #111315 !important;
-  font-weight: 700;
-}
-
-// 'Murmuring John 발행일: ... Blog에 포함' 줄을 차분하게 정리
 .single-meta {
   color: #6E7681 !important;
   font-size: 0.88rem;
+}
+
+/* 3. 포스트 본문 가독성 및 주목성 강화 */
+.single .single-title {
+  color: #0F1114 !important;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.single .single-subtitle {
+  color: #4E5661 !important;
+  font-weight: 500;
+}
+
+.single .content,
+.single .content p {
+  font-size: 1.06rem;
+  font-weight: 400;
+  line-height: 1.88;
+  color: #1A1D21 !important;
+  margin-bottom: 1.55em;
+}
+
+/* 소제목(h2): 왼쪽에 잉크블루 포인트 바를 주어 글의 흐름이 명확히 끊어지도록 강조 */
+.single .content h2 {
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: #111315 !important;
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+  padding-left: 0.65em;
+  border-left: 4px solid #34507A;
+  line-height: 1.35;
+}
+
+.single .content h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #22262B !important;
+  margin-top: 2em;
+  margin-bottom: 0.8em;
+}
+
+/* 본문 내 굵은 글씨(**강조**) 주목성 강화 */
+.single .content strong,
+.single .content b {
+  font-weight: 700;
+  color: #0F1114;
+}
+
+/* 4. 성경 구절·문헌 인용구(Blockquote): 연한 블루그레이 배경과 진한 테두리로 시선 집중 */
+.single .content blockquote {
+  background-color: #F6F8FB !important;
+  border-left: 4px solid #34507A !important;
+  padding: 1.1em 1.4em !important;
+  margin: 1.8em 0 !important;
+  border-radius: 0 6px 6px 0;
+  color: #232A34 !important;
+}
+
+.single .content blockquote p {
+  margin-bottom: 0 !important;
+  font-size: 1.02rem;
+  line-height: 1.78;
+  color: #232A34 !important;
+}
+
+/* 5. 우측 목차(TOC) 활성화 항목 강조 */
+#toc-auto .toc-content a.active {
+  color: #34507A !important;
+  font-weight: 700;
 }
