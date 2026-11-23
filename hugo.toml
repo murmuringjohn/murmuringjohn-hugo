@@ -28,7 +28,7 @@ theme = "FixIt"
   # 확인됨 (FixIt 공식 hugo.toml 기준)
   defaultTheme = "auto"        # light / dark / auto
   dateFormat = "2006-01-02"
-  fingerprint = ""
+  fingerprint = "sha256"
   enablePWA = false
   capitalizeTitles = true
   withSiteTitle = true
