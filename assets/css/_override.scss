@@ -1,31 +1,30 @@
-// ── 폰트: 프리텐다드 Light ────────────────────────
-@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
-$global-font-family: 'Pretendard Variable', $global-font-family;
-$global-font-weight: 300;
+// ── 폰트 ──────────────────────────────────────────
+$global-font-family: 'Pretendard Variable', 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+$global-font-weight: 400; // 기존 300(Light)에서 400(Regular)으로 상향
 
-// ── 배경색 ──────────────────────────────────────
-$global-background-color: #FAF8F4;
-$global-background-color-dark: #1E1C18;
-$header-background-color: #F3EEE3;
-$header-background-color-dark: #221F1A;
+// ── 배경색: 군더더기 없는 순백색 통일 ─────────────────
+$global-background-color: #FFFFFF;
+$global-background-color-dark: #141619;
+$header-background-color: #FFFFFF; // 헤더도 흰색으로 통일해 깔끔한 HTML 느낌 구현
+$header-background-color-dark: #141619;
 
-// ── 본문 글자색 ────────────────────────────────────
-$global-font-color: #34302A;
-$global-font-color-dark: #D9D2C2;
-$global-font-secondary-color: #1a1a1a;
-$global-font-secondary-color-dark: #A89F8D;
+// ── 본문 글자색: 고대비 먹색 ──────────────────────────
+$global-font-color: #191C20;
+$global-font-color-dark: #E6E8EC;
+$global-font-secondary-color: #646B75; // 날짜·카테고리 등 보조 텍스트
+$global-font-secondary-color-dark: #949BA6;
 
-$global-border-color: #E5DFD2;
-$global-border-color-dark: #3A352C;
+$global-border-color: #EAECEF;
+$global-border-color-dark: #2A2E35;
 
-// ── 포인트 색: 와인 → 잉크블루 ─────────────────────
+// ── 포인트 색: 기존 잉크블루 유지 ─────────────────────
 $global-link-color: #34507A;
 $global-link-color-dark: #7FA3D1;
-$global-link-hover-color: #4A6B9C;
+$global-link-hover-color: #223859;
 $global-link-hover-color-dark: #9EBBDD;
 $single-link-color: #34507A;
 $single-link-color-dark: #7FA3D1;
-$single-link-hover-color: #4A6B9C;
+$single-link-hover-color: #223859;
 $single-link-hover-color-dark: #9EBBDD;
 $blockquote-color: #34507A;
 $blockquote-color-dark: #7FA3D1;
