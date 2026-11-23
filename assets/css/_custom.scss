@@ -1,48 +1,79 @@
-/* 1. Pretendard 표준 웹폰트 적용 (가변 폰트보다 브라우저 호환성과 굵기 표현이 안정적) */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
+/* =========================================================
+   1. 라이트모드 기본 설정 (크림 아이보리 & 웜 테라코타)
+   ========================================================= */
 html, body {
   font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif !important;
-  background-color: #FFFFFF !important;
-  color: #191C20 !important;
+  background-color: #FBF9F5 !important;
+  color: #24211E !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.015em;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-/* 상단 헤더 및 경계선 */
+/* 상단 헤더 */
 header {
   background-color: #FFFFFF !important;
-  border-bottom: 1px solid #EAECEF !important;
+  border-bottom: 1px solid #EDE8DF !important;
 }
 
-/* 2. 메인 화면 글 목록 요약문 선명하게 */
-.single.summary .single-title a {
-  color: #111315 !important;
+header .header-title a {
+  color: #1D1A17 !important;
   font-weight: 700;
+}
+
+header .menu a:hover {
+  color: #B85D3B !important;
+}
+
+/* 메인 화면 글 목록 카드 */
+.single.summary {
+  background-color: #FFFFFF !important;
+  padding: 1.8em 2em !important;
+  margin-bottom: 1.4em !important;
+  border-radius: 10px;
+  border: 1px solid #EDE8DF !important;
+  box-shadow: 0 2px 8px rgba(36, 33, 30, 0.03);
+}
+
+.single.summary .single-title a {
+  color: #1D1A17 !important;
+  font-weight: 700;
+}
+
+.single.summary .single-title a:hover {
+  color: #B85D3B !important;
 }
 
 .single.summary .content,
 .summary .content {
-  color: #22252A !important;
+  color: #38332E !important;
   font-weight: 400 !important;
   opacity: 1 !important;
 }
 
 .single-meta {
-  color: #6E7681 !important;
-  font-size: 0.88rem;
+  color: #787067 !important;
+  font-size: 0.86rem;
 }
 
-/* 3. 포스트 본문 가독성 및 주목성 강화 */
+.single-meta a,
+.post-footer a {
+  color: #B85D3B !important;
+  font-weight: 600;
+}
+
+/* 개별 포스트 본문 */
 .single .single-title {
-  color: #0F1114 !important;
+  color: #1A1714 !important;
   font-weight: 800;
   letter-spacing: -0.025em;
 }
 
 .single .single-subtitle {
-  color: #4E5661 !important;
+  color: #635B52 !important;
   font-weight: 500;
 }
 
@@ -51,56 +82,167 @@ header {
   font-size: 1.06rem;
   font-weight: 400;
   line-height: 1.88;
-  color: #1A1D21 !important;
+  color: #24211E !important;
   margin-bottom: 1.55em;
 }
 
-/* 소제목(h2): 왼쪽에 잉크블루 포인트 바를 주어 글의 흐름이 명확히 끊어지도록 강조 */
+/* 소제목(h2): 웜 테라코타 세로 포인트 바 */
 .single .content h2 {
-  font-size: 1.38rem;
+  font-size: 1.36rem;
   font-weight: 700;
-  color: #111315 !important;
+  color: #1A1714 !important;
   margin-top: 2.5em;
   margin-bottom: 1em;
-  padding-left: 0.65em;
-  border-left: 4px solid #34507A;
+  padding-left: 0.7em;
+  border-left: 4px solid #B85D3B;
   line-height: 1.35;
 }
 
 .single .content h3 {
-  font-size: 1.18rem;
+  font-size: 1.16rem;
   font-weight: 700;
-  color: #22262B !important;
+  color: #2E2924 !important;
   margin-top: 2em;
   margin-bottom: 0.8em;
 }
 
-/* 본문 내 굵은 글씨(**강조**) 주목성 강화 */
+.single .content a {
+  color: #B85D3B !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .single .content strong,
 .single .content b {
   font-weight: 700;
-  color: #0F1114;
+  color: #141210;
 }
 
-/* 4. 성경 구절·문헌 인용구(Blockquote): 연한 블루그레이 배경과 진한 테두리로 시선 집중 */
+/* 성경 구절·책 인용구 박스 */
 .single .content blockquote {
-  background-color: #F6F8FB !important;
-  border-left: 4px solid #34507A !important;
-  padding: 1.1em 1.4em !important;
+  background-color: #F7EFE9 !important;
+  border-left: 4px solid #B85D3B !important;
+  padding: 1.15em 1.45em !important;
   margin: 1.8em 0 !important;
-  border-radius: 0 6px 6px 0;
-  color: #232A34 !important;
+  border-radius: 0 8px 8px 0;
 }
 
 .single .content blockquote p {
   margin-bottom: 0 !important;
   font-size: 1.02rem;
   line-height: 1.78;
-  color: #232A34 !important;
+  color: #2E2823 !important;
 }
 
-/* 5. 우측 목차(TOC) 활성화 항목 강조 */
+/* 우측 목차(TOC) */
+#toc-auto {
+  border-left: 1px solid #E8E2D7 !important;
+}
+
 #toc-auto .toc-content a.active {
-  color: #34507A !important;
+  color: #B85D3B !important;
   font-weight: 700;
+}
+
+
+/* =========================================================
+   2. 다크모드 전용 설정 (딥 에스프레소 & 웜 앰버 테라코타)
+   ========================================================= */
+[data-theme='dark'] body,
+body[data-theme='dark'] {
+  background-color: #181614 !important;
+  color: #EAE4DC !important;
+}
+
+[data-theme='dark'] header {
+  background-color: #201D1A !important;
+  border-bottom: 1px solid #302B26 !important;
+}
+
+[data-theme='dark'] header .header-title a {
+  color: #F5F0E8 !important;
+}
+
+[data-theme='dark'] header .menu a:hover {
+  color: #E08A68 !important;
+}
+
+/* 다크모드 메인 화면 글 목록 카드 */
+[data-theme='dark'] .single.summary {
+  background-color: #211E1B !important;
+  border: 1px solid #322D27 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme='dark'] .single.summary .single-title a {
+  color: #F5F0E8 !important;
+}
+
+[data-theme='dark'] .single.summary .single-title a:hover {
+  color: #E08A68 !important;
+}
+
+[data-theme='dark'] .single.summary .content,
+[data-theme='dark'] .summary .content {
+  color: #D6CEC3 !important;
+}
+
+[data-theme='dark'] .single-meta {
+  color: #9C9286 !important;
+}
+
+[data-theme='dark'] .single-meta a,
+[data-theme='dark'] .post-footer a {
+  color: #E08A68 !important;
+}
+
+/* 다크모드 개별 포스트 본문 */
+[data-theme='dark'] .single .single-title {
+  color: #F7F2EB !important;
+}
+
+[data-theme='dark'] .single .single-subtitle {
+  color: #B5ABA0 !important;
+}
+
+[data-theme='dark'] .single .content,
+[data-theme='dark'] .single .content p {
+  color: #E6DFD5 !important;
+}
+
+[data-theme='dark'] .single .content h2 {
+  color: #F7F2EB !important;
+  border-left-color: #E08A68 !important;
+}
+
+[data-theme='dark'] .single .content h3 {
+  color: #EDE6DC !important;
+}
+
+[data-theme='dark'] .single .content a {
+  color: #E08A68 !important;
+}
+
+[data-theme='dark'] .single .content strong,
+[data-theme='dark'] .single .content b {
+  color: #FFFFFF !important;
+}
+
+/* 다크모드 성경 구절·책 인용구 박스 */
+[data-theme='dark'] .single .content blockquote {
+  background-color: #28231F !important;
+  border-left: 4px solid #E08A68 !important;
+}
+
+[data-theme='dark'] .single .content blockquote p {
+  color: #E6DFD5 !important;
+}
+
+/* 다크모드 우측 목차(TOC) */
+[data-theme='dark'] #toc-auto {
+  border-left: 1px solid #322D27 !important;
+}
+
+[data-theme='dark'] #toc-auto .toc-content a.active {
+  color: #E08A68 !important;
 }
