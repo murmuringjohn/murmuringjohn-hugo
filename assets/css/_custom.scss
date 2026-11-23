@@ -37,3 +37,23 @@ article .content p {
 header {
   border-bottom: 1px solid #EAECEF;
 }
+
+// 메인 화면 글 목록의 요약문(.summary)이 흐릿한 회색으로 나오는 문제 해결
+.single.summary .content,
+.summary .content {
+  color: #22252A !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+// 글 목록 제목을 더 또렷하게 강조
+.single.summary .single-title a {
+  color: #111315 !important;
+  font-weight: 700;
+}
+
+// 'Murmuring John 발행일: ... Blog에 포함' 줄을 차분하게 정리
+.single-meta {
+  color: #6E7681 !important;
+  font-size: 0.88rem;
+}
